@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --nav-bg-color: #306acf;
+    --nav-text-color: #ffffff;
+    /* Define a variable for the background color */
+}
+
+.logo img {
+    @apply w-[60px] h-[60px];
+}
+
+#primary-menu {
+    @apply space-x-10;
+}
+
+/* Custom CSS for main navigation */
+.main-navigation .sub-menu {
+    display: none;
+    /* Hide by default */
+    position: absolute;
+    /* Positioning relative to the parent menu item */
+    z-index: 10;
+    /* Ensure it appears above other content */
+    background-color: #fff;
+    /* Background color */
+    border: 1px solid #ddd;
+    /* Border styling */
+    min-width: 200px;
+    /* Minimum width */
+}
+
+.main-navigation li:hover>.sub-menu {
+    display: block;
+    /* Display the sub-menu on hover */
+}
+
+.main-navigation .sub-menu li {
+    position: relative;
+    /* Needed for positioning nested sub-menus */
+    padding: 0.5rem 1rem;
+    /* Padding for sub-menu items */
+}
+
+.main-navigation .sub-menu li a {
+    color: #333;
+    /* Text color for sub-menu items */
+    display: block;
+    /* Make the anchors fill their li for better click area */
+}
+
+.main-navigation .sub-menu li a:hover {
+    color: #007bff;
+    /* Text color on hover */
+}
